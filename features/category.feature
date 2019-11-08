@@ -14,4 +14,7 @@ Feature: Add and edit categories
     And I fill in "category_permalink" with "Permalink1"
     And I fill in "category_description" with "Description1"
     And I press "Save"
-    Then I should see "Category was successfully saved" 
+    Then I should see "Example1"
+    Then I should see "Keyword1"
+    Then I should see "Permalink1"
+    Then I should see "Description1"

@@ -75,7 +75,9 @@ describe Admin::CategoriesController do
     end
 
     it 'should create a new category' do
-      post :new, :category => {name: 'Example1'}
+      post :new, :category => {name: 'Example1', :keywords => 'Keyword1', :permalink => 'Permalink1', :description => 'Description1'}
+      assert_response :redirect, :action=> "index"
+      expect(assigns(:category)).to_not be_nil
       expect(flash[:notice]).to eq('Category was successfully saved.')
     end
   end
